@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevDetective App</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>DevDetective</h1>
+        <div id="mode">
+          <div id="text">LIGHT</div>
+          <img id="icon" src="assets/sun-icon.svg" alt="">
+        </div>
+      </div>
+      <div class="main">
+        <div class="searchbar">
+          <div class="icon"><img src="assets/search-icon.svg" alt=""></div>
+          <input type="text" placeholder="Enter a GitHub Username..." id="input" required>
+          <div id="noResult">no search results</div>
+          <button id="button">Search</button>
+        </div>
+        <div class="profile">
+          <div class="header">
+            <img id="userImage" src="" alt="">
+            <div class="info">
+              <div id="name"></div>
+              <a href="" id="username"></a>
+            </div>
+            <div id="date"></div>
+          </div>
+          <div id="bio"></div>
+          <div class="stats">
+            <div class="stat">
+              <div class="title">Repos</div>
+              <div class="value" id="repos"></div>
+            </div>
+            <div class="stat">
+              <div class="title">Followers</div>
+              <div class="value" id="followers"></div>
+            </div>
+            <div class="stat">
+              <div class="title">Following</div>
+              <div class="value" id="following"></div>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="info">
+              <div class="icon"><img src="assets/location-icon.svg" alt=""></div>
+              <span id="location"></span>
+            </div>
+            <div class="info">
+              <div class="icon"><img src="assets/website-icon.svg" alt=""></div>
+              <a href="" id="page"></a>
+            </div>
+            <div class="info">
+              <div class="icon"><img src="assets/twitter-icon.svg" alt=""></div>
+              <a href="" id="twitter"></a>
+            </div>
+            <div class="info">
+              <div class="icon"><img src="assets/company-icon.svg" alt=""></div>
+              <span id="company"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

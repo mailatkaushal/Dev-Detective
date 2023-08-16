@@ -1,0 +1,220 @@
+:root {
+  --dm-bg: #000;
+  --dm-bg-content: #121212;
+  --dm-text: #fff;
+  --dm-text-alt: #fff;
+  --dm-btn: #363636;
+  --dm-btn-hvr: #484848;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+
+  & body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dm-bg);
+  }
+
+  .container {
+    width: 36rem;
+    color: var(--dm-text);
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & h1 {
+        font-size: 2rem;
+        letter-spacing: 0.125rem;
+      }
+
+      #mode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        letter-spacing: 0.125rem;
+        color: var(--dm-text);
+        cursor: pointer;
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .searchbar {
+        background: var(--dm-bg-content);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        position: relative;
+
+        .icon {
+          padding: 0 0.75rem 0 1rem;
+
+          & img {
+            width: 1.25rem;
+          }
+        }
+
+        & input {
+          all: unset;
+          color: var(--dm-text);
+          flex: 1;
+
+          ::placeholder {
+            color: var(--dm-text);
+            font-size: 1rem;
+          }
+        }
+
+        #noResult {
+          position: absolute;
+          color: #969696;
+          font-weight: bold;
+          right: 0.5rem;
+          top: -1.75rem;
+          text-transform: capitalize;
+        }
+
+        & button {
+          min-width: 5.25rem;
+          padding: 0.875rem 1.75rem;
+          background: var(--dm-btn);
+          border: none;
+          border-radius: 0.625rem;
+          color: #fff;
+          font-size: 1rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.2s;
+          line-height: 1.39;
+
+          &:hover {
+            background: var(--dm-btn-hvr);
+          }
+
+          &:active {
+            transform: scale(0.97);
+          }
+        }
+      }
+
+      .profile {
+        background: var(--dm-bg-content);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-between;
+
+        .header {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+
+          #userImage {
+            width: 7.5rem;
+            border-radius: 100%;
+            background-color: transparent;
+          }
+
+          .info {
+            padding-top: 0.625rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.875rem;
+
+            #name {
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: var(--dm-text-alt);
+            }
+
+            #username {
+              color: inherit;
+            }
+          }
+
+          #date {
+            padding-top: 0.625rem;
+            font-size: 1rem;
+            margin-left: auto;
+            align-self: flex-start;
+          }
+        }
+
+        #bio {
+          line-height: 1.5rem;
+          opacity: 0.75;
+        }
+
+        .stats {
+          display: flex;
+          justify-content: space-between;
+          background: var(--dm-bg);
+          text-align: center;
+          border-radius: 0.75rem;
+          padding: 1.125rem 2rem;
+
+          .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .title {
+              font-size: 0.75rem;
+            }
+
+            .value {
+              font-size: 1rem;
+              font-weight: bold;
+              color: var(--dm-text-alt);
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 1rem 0;
+          flex-wrap: wrap;
+
+          .info {
+            width: 50%;
+            display: flex;
+            gap: 0.875rem;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              width: 1.25rem;
+            }
+
+            & a {
+              color: var(--dm-text);
+            }
+          }
+        }
+      }
+    }
+  }
+}
